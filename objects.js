@@ -28,27 +28,29 @@
 // console.log(person["married"])
 // person.homeOwner = "true"
 // console.log(person)
-const pet = {
-    name: "Samuel Theodore Wellington III",
-    age: 12,
-    breed: "Springer Spaniel",
-    colour: "Liver and White",
-    features: ["just loads of fluff on his noggin", "loads of fluff on his paws too", "massive dump truck booty", "loves fetch"],
-    eat () {
-        return `${this.name} is eating.`
-    },
-    drink () {
-        return `${this.name} is drinking.`
-    }
-}
+
+
+// const pet = {
+//     name: "Samuel Theodore Wellington III",
+//     age: 12,
+//     breed: "Springer Spaniel",
+//     colour: "Liver and White",
+//     features: ["just loads of fluff on his noggin", "loads of fluff on his paws too", "massive dump truck booty", "loves fetch"],
+//     eat () {
+//         return `${this.name} is eating.`
+//     },
+//     drink () {
+//         return `${this.name} is drinking.`
+//     }
+// }
 // console.log("My dog is called " + pet.name + ". He is " + pet.age + " years old and is a " + pet.colour + " " + pet.breed + ".")
 // console.log(`My dog is called ${pet["name"]}. He is ${pet["age"]} years old and is a ${pet["colour"]} ${pet["breed"]}.`)
 
 
 
-pet.colour = "Aquamarine and Cyan"
-console.log(pet.eat())
-console.log(pet.drink())
+// pet.colour = "Aquamarine and Cyan"
+// console.log(pet.eat())
+// console.log(pet.drink())
 
 
 
@@ -62,11 +64,12 @@ const coffeeShop = {
     branch: "Costarbucks",
     drinks: [["Tea", 2], ["Coffee", 3], ["Expensive water", 540.29]],
     food: [["Cake", 2.99], ["Fruit", 1.25], ["Doughnut", 5]],
-    drinksOrdered (drink) {
-        return `You have ordered ${this.drinks[i][0]}`
+    drinksOrdered (i) {
+        return `Welcome to ${this.branch}! Your order is: ${this.drinks[i][0]}. That will be £${this.drinks[i][1]} please!`
     },
-    foodOrdered () {
-
+    foodOrdered (j) {
+        return `Welcome to ${this.branch}! Your order is: ${this.food[j][0]}. That will be £${this.food[j][1]} please!`
     }
 }
-console.log(coffeeShop.drinksOrdered("Tea"))
+console.log(coffeeShop.drinksOrdered(1))
+console.log(coffeeShop.foodOrdered(2))
