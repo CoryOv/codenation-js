@@ -1,9 +1,9 @@
 // let hunger = "full"
 
-// if (hunger == "hungry") {
+// if (hunger == "hungry") {                   //== is comparing with the variable
 //     console.log("Yes please I'm starving!")
 // }
-// else if (hunger == "full") {
+// else if (hunger == "full") {                //here they match and so this statement will run
 //     console.log("No thanks, I'm stuffed!")
 // }
 // else {
@@ -22,7 +22,7 @@
 //     console.log("Where's the party?")
 // }
 
-// if (4 === "4") {
+// if (4 === "4") {               //=== checks whether the data type is an exact match
 //     console.log(true)
 // }
 // else {
@@ -41,7 +41,7 @@
 // let food = "anything"
 // let hunger = "ravenous"
 
-// if (hunger == "full" && food == "ice cream") {
+// if (hunger == "full" && food == "ice cream") {         //&& wants both statements to be true
 //     console.log("Of course, who wouldn't")
 // }
 // else if (hunger == "hungry" && food == "ice cream") {
@@ -114,17 +114,6 @@
 //     console.log(num)
 // }
 
-// switch(num) {
-//     case (num % 3 == 0):
-//         console.log("fizz")
-//     case (num % 5 == 0):
-//         console.log("buzz")
-//     case (num % 3 == 0) && (num % 5 == 0):
-//         console.log("fizzbuzz")
-//         break
-//     default:
-//         console.log(num)
-// }
 
 
 // let time = 12
@@ -145,33 +134,58 @@
 // }
 
 
-let myString = "jrfndklhgfndjkjlkgperfijfhdknsadcvjhiiohjfkledsopiuhgtyujwsdxcvhgfdjhiopiwquhejkdsoiufghedjwshi"
-let vowels = ["a", "e", "i", "o", "u"]
-let array = myString.split(""); // split string into array
-let vowelIndex = []
-for (const letter of vowels) {
-    vowelIndex.push(array.lastIndexOf(letter))
+
+let string = "jrfndklhgfndjkjlkgperfijfhdknsadcvjhiiohjfkledsopiuhgtyujwsdxcvhgfdjhiopiwquhejkdsoiufghedjwshi";
+let vowels = ["a","e","i","o","u"]
+let array = string.split ("");
+let count = 0;
+
+// main loop - this will iterate 95 times
+for (let i = 0; i < array.length; i++) {
+    // secondary loop - this will iterate 5 times
+    // we will remain in this secondary loop until all iterations complete,
+    // then return to the main loop
+    for (let x = 0; x < vowels.length; x++) {
+        // compare index i against each index of vowels array
+        // x will increase and increment, i will not at this level
+        if (array[i] == vowels[x]) {
+            // use count variable as a counter, store the last true test index
+            count = i;
+        }
+    }
 }
-console.log(Math.max(...vowelIndex)) //... is a spread operator, writes the whole list out without user doing it.
 
+console.log(count);
 
-// let word = "strings"
-// let first = word[0]
-// let last = word.charAt(word.length - 1)
-// if (first == last) {
-//     console.log(true)
+// alternative solution
+
+// let myString = "jrfndklhgfndjkjlkgperfijfhdknsadcvjhiiohjfkledsopiuhgtyujwsdxcvhgfdjhiopiwquhejkdsoiufghedjwshi"
+// let vowels = ["a", "e", "i", "o", "u"]
+// let array = myString.split(""); // split string into array
+// let vowelIndex = []
+// for (const letter of vowels) {
+//     vowelIndex.push(array.lastIndexOf(letter))
 // }
-// else {
-//     console.log(false)
-// }
+// console.log(Math.max(...vowelIndex)) //... is a spread operator, writes the whole list out without user doing it.
 
 
-// let num1 = 3
-// let num2 = 6
+let word = "strings"
+let first = word[0]
+let last = word.charAt(word.length - 1)        //the final index is always length -1 due to zero index
+if (first == last) {
+    console.log(true)
+}
+else {
+    console.log(false)
+}
 
-// if ((num1 + num2) % 2 == 0) {
-//     console.log(num1 + num2)
-// }
-// else {
-//     console.log(num1 * num2)
-// }
+
+let num1 = 3
+let num2 = 6
+
+if ((num1 + num2) % 2 == 0) {
+    console.log(num1 + num2)
+}
+else {
+    console.log(num1 * num2)
+}

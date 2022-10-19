@@ -1,5 +1,5 @@
-let favHolidayDestinations = [
-    "Venice, Italy", "Paris, France", "Barcelona, Spain"
+let favHolidayDestinations = [            //square brackets denote the start of an array
+    "Venice, Italy", "Paris, France", "Barcelona, Spain"      //elements are separated by a comma
 ]
 console.log(favHolidayDestinations)
 
@@ -13,18 +13,20 @@ let favGames = [
 ]
 console.log(favGames)
 
-console.log(favHolidayDestinations[2])
+console.log(favHolidayDestinations[2])    //choosing a specific element at the given index (arrays are zero indexed)
 console.log(favFilms[0])
 
-favHolidayDestinations[1] = "Florida, USA"
+favHolidayDestinations[1] = "Florida, USA"      //updates the array at the given index
 console.log(favHolidayDestinations)
 
 favFilms[1] = "Avengers: Endgame"
 console.log(favFilms)
 
 console.log(favHolidayDestinations.length)
-// console.log(favHolidayDestinations.pop())
-//slicespliceshiftunshiftmap  map will apply a created function to each element of an array
+console.log(favHolidayDestinations.pop())    //removes the last item in the array and stores it in memory
+
+
+// .map will apply a created function to each element of an array
 
 favGames.splice(1, 0, "I-Ninja") //adds item at position 1
 console.log(favGames)
